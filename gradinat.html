@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradients</title>
+
+    <style>
+
+        .container {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            margin: 50px auto 0;
+            position: relative;
+        }
+
+        /* Linear Gradient */
+        .div {
+            width: 100px;
+            height: 100px;
+
+            background: linear-gradient(
+                to right,
+                red,
+                blue,
+                green,
+                yellow,
+                orange
+            )padding-box,
+              linear-gradient(black, white) border-box;
+
+            display: inline-block;
+            border: 5px solid transparent;
+        }
+
+        /* Radial Gradient */
+        .div1 {
+            width: 100px;
+            height: 100px;
+
+            background: radial-gradient(
+                red,
+                blue,
+                green,
+                yellow,
+                orange,
+                purple,
+                black,
+                white
+            )padding-box,
+              linear-gradient(black, white) border-box;
+
+            display: inline-block;
+            border: 5px solid transparent;
+        }
+
+        /* Conic Gradient */
+        .div2 {
+            width: 100px;
+            height: 100px;
+
+            background: conic-gradient(
+                red,
+                blue,
+                green,
+                yellow,
+                orange,
+                purple,
+                black,
+                white
+            )padding-box,
+              linear-gradient(black, white); border: 5px solid transparent;
+
+            display: inline-block;
+        }
+        p{
+            text-align: center;
+            font-size: 50px;
+            font-weight: 900;
+            color:transparent;
+            background: linear-gradient(to right, red, blue, green, yellow, orange);
+            background-clip: text;
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="div"></div>
+
+        <div class="div1"></div>
+
+        <div class="div2"></div>
+        <p>BOX</p>
+
+    </div>
+
+</body>
+</html>

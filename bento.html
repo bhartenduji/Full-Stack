@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bento Box</title>
+
+    <style>
+        .container {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 100px 150px 100px 80px;
+
+            gap: 8px;
+
+            grid-template-areas:
+                "header  header  header  header"
+                "sidebar main    main    main"
+                "sidebar card1   card2   card2"
+                "footer  footer  footer  footer";
+        }
+
+        .box {
+            background: pink;
+            color: white;
+
+            font-size: 20px;
+            text-align: center;
+
+            border: 2px solid black;
+            border-radius: 10px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+        }
+
+        .main {
+            grid-area: main;
+        }
+
+        .card1 {
+            grid-area: card1;
+        }
+
+        .card2 {
+            grid-area: card2;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="box header">HEADER</div>
+
+        <div class="box sidebar">SIDEBAR</div>
+
+        <div class="box main">MAIN CONTENT</div>
+
+        <div class="box card1">CARD 1</div>
+
+        <div class="box card2">CARD 2</div>
+
+        <div class="box footer">FOOTER</div>
+
+    </div>
+
+</body>
+</html>
+```

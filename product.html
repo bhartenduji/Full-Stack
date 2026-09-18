@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Cards</title>
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    padding:50px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:40px;
+    color:#222;
+}
+
+.container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    position:relative;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+
+}
+
+.badge{
+
+    position:absolute;
+
+    top:18px;
+    right:18px;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+}
+
+.icon{
+
+    width:70px;
+    height:70px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#eff6ff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    color:#2563eb;
+
+    margin-bottom:20px;
+
+}
+
+.category{
+
+    color:#777;
+
+    text-align:center;
+
+    margin-bottom:8px;
+
+}
+
+.title{
+
+    text-align:center;
+
+    font-size:24px;
+
+    color:#222;
+
+}
+
+.desc{
+
+    text-align:center;
+
+    color:#666;
+
+    margin:15px 0;
+
+    line-height:1.6;
+
+}
+
+.rating{
+
+    text-align:center;
+
+    color:#fbbf24;
+
+    margin-bottom:18px;
+
+}
+
+.price{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+.price span{
+
+    font-size:30px;
+
+    color:#2563eb;
+
+    font-weight:bold;
+
+}
+
+.old{
+
+    text-decoration:line-through;
+
+    color:#999;
+
+    margin-left:10px;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#1d4ed8;
+
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>Featured Products</h1>
+
+<div class="container">
+
+    <!-- Card 1 -->
+
+    <div class="card">
+
+        <div class="badge">New</div>
+
+        <div class="icon">
+            <i class="fa-solid fa-laptop-code"></i>
+        </div>
+
+        <p class="category">Software</p>
+
+        <h2 class="title">Developer Suite</h2>
+
+        <p class="desc">
+            Complete toolkit for web development with premium support and updates.
+        </p>
+
+        <div class="rating">
+            ★★★★★ (4.9)
+        </div>
+
+        <div class="price">
+            <span>$99</span>
+            <span class="old">$149</span>
+        </div>
+
+        <button>
+            <i class="fa-solid fa-cart-shopping"></i>
+            Buy Now
+        </button>
+
+    </div>
+
+    <!-- Card 2 -->
+
+    <div class="card">
+
+        <div class="badge">Popular</div>
+
+        <div class="icon">
+            <i class="fa-solid fa-cloud"></i>
+        </div>
+
+        <p class="category">Cloud</p>
+
+        <h2 class="title">Cloud Storage</h2>
+
+        <p class="desc">
+            Secure cloud storage with automatic backup and file synchronization.
+        </p>
+
+        <div class="rating">
+            ★★★★☆ (4.7)
+        </div>
+
+        <div class="price">
+            <span>$29</span>
+            <span class="old">$49</span>
+        </div>
+
+        <button>
+            <i class="fa-solid fa-cart-shopping"></i>
+            Buy Now
+        </button>
+
+    </div>
+
+    <!-- Card 3 -->
+
+    <div class="card">
+
+        <div class="badge">Sale</div>
+
+        <div class="icon">
+            <i class="fa-solid fa-shield-halved"></i>
+        </div>
+
+        <p class="category">Security</p>
+
+        <h2 class="title">Premium Antivirus</h2>
+
+        <p class="desc">
+            Advanced protection against malware, ransomware, and phishing attacks.
+        </p>
+
+        <div class="rating">
+            ★★★★★ (5.0)
+        </div>
+
+        <div class="price">
+            <span>$59</span>
+            <span class="old">$89</span>
+        </div>
+
+        <button>
+            <i class="fa-solid fa-cart-shopping"></i>
+            Buy Now
+        </button>
+
+    </div>
+
+</div>
+
+</body>
+</html>

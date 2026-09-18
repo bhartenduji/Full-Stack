@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stacking Cards on Scroll</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#ececec;
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+    padding:80px 0;
+}
+
+.card{
+    position:sticky;
+    top:50px;
+
+    height:500px;
+    margin-bottom:120px;
+    border-radius:20px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    color:white;
+    font-size:40px;
+    font-weight:bold;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+.card p{
+    font-size:20px;
+    margin-top:15px;
+}
+
+.card:nth-child(1){
+    background:#ff5f6d;
+}
+
+.card:nth-child(2){
+    background:#4facfe;
+}
+
+.card:nth-child(3){
+    background:#43e97b;
+}
+
+.card:nth-child(4){
+    background:#fa709a;
+}
+
+.card:nth-child(5){
+    background:#6a11cb;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+        Card 1
+        <p>Keep scrolling ↓</p>
+    </div>
+
+    <div class="card">
+        Card 2
+        <p>This card covers Card 1</p>
+    </div>
+
+    <div class="card">
+        Card 3
+        <p>This card covers Card 2</p>
+    </div>
+
+    <div class="card">
+        Card 4
+        <p>This card covers Card 3</p>
+    </div>
+
+    <div class="card">
+        Card 5
+        <p>Last card</p>
+    </div>
+
+</div>
+
+</body>
+</html>

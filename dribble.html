@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .outer {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+
+            margin: 50px auto 0;
+
+            position: relative;
+        }
+        .inner{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            display: inline-block;;
+            border: 1px solid black;
+            position: absolute;
+            margin-top: 20%;
+
+        }
+           .inner:first-child {
+            left: 30%;
+        }
+
+        .inner:nth-child(2) {
+            right: 30%;
+        }
+        .bottom{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            display: inline-block;
+            border: 1px solid black;
+        }
+         .bottom-container {
+            width: 500px;
+            margin: 20px auto;
+
+            display: flex;
+            justify-content: space-between;
+        }
+        </style>
+</head>
+<body>
+    
+    <div class="outer">
+        <div class="inner"></div>
+        <div class="inner"></div>
+    </div>
+    <div class ='bottom-container'>
+    <div class="bottom"></div> <div class="bottom"></div> <div class="bottom"></div>
+    </div>
+</body>
+</html>
