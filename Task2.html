@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopKart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-50">
+
+<!-- Navbar -->
+<nav class="bg-white border-b">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <h1 class="text-xl font-bold text-blue-600">ShopKart</h1>
+
+        <div class="hidden sm:flex gap-6 items-center">
+            <input type="text" placeholder="Search for products..."
+                   class="border rounded px-4 py-2 text-sm w-64">
+            <a href="#">🛒</a>
+            <a href="#">♙</a>
+        </div>
+
+        <button class="sm:hidden">☰</button>
+    </div>
+</nav>
+
+<main class="max-w-7xl mx-auto px-6 py-6">
+
+    <p class="text-sm text-gray-500 mb-5">Electronics › Laptops</p>
+
+    <!-- Tablet / Mobile filters -->
+    <div class="lg:hidden flex gap-3 mb-6">
+        <button class="bg-white border px-4 py-2 rounded">Filters</button>
+        <button class="bg-white border px-4 py-2 rounded">Sort</button>
+    </div>
+
+    <div class="flex gap-8">
+
+        <!-- Sidebar -->
+        <aside class="hidden lg:block w-60 bg-white border rounded-lg p-5 shrink-0">
+            <h2 class="font-semibold mb-4">Filters</h2>
+
+            <h3 class="font-semibold text-sm mb-2">Category</h3>
+            <div class="text-sm text-gray-600 space-y-2">
+                <label class="block"><input type="checkbox"> Laptops</label>
+                <label class="block"><input type="checkbox"> Desktops</label>
+                <label class="block"><input type="checkbox"> Tablets</label>
+                <label class="block"><input type="checkbox"> Accessories</label>
+            </div>
+
+            <h3 class="font-semibold text-sm mt-6 mb-2">Price Range</h3>
+            <div class="text-sm text-gray-600 space-y-2">
+                <label class="block"><input type="checkbox"> ₹0 - ₹30,000</label>
+                <label class="block"><input type="checkbox"> ₹30,000 - ₹50,000</label>
+                <label class="block"><input type="checkbox"> ₹50,000+</label>
+            </div>
+
+            <h3 class="font-semibold text-sm mt-6 mb-2">Brand</h3>
+            <div class="text-sm text-gray-600 space-y-2">
+                <label class="block"><input type="checkbox"> Dell</label>
+                <label class="block"><input type="checkbox"> HP</label>
+                <label class="block"><input type="checkbox"> Lenovo</label>
+                <label class="block"><input type="checkbox"> Apple</label>
+            </div>
+
+            <button class="bg-blue-600 text-white w-full py-2 rounded mt-6">
+                Apply Filters
+            </button>
+        </aside>
+
+        <!-- Products -->
+        <section class="flex-1">
+
+            <div class="flex justify-between items-center mb-5">
+                <p class="text-sm text-gray-500">Showing 6 products</p>
+
+                <select class="hidden sm:block border rounded px-3 py-2 text-sm">
+                    <option>Sort by: Popularity</option>
+                    <option>Price: Low to High</option>
+                </select>
+            </div>
+
+            <!-- CSS Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+                <!-- Product 1 -->
+                <div class="bg-white border rounded-xl p-4 flex flex-col hover:shadow-lg">
+                    <div class="relative h-48 overflow-hidden rounded">
+                        <span class="absolute z-10 bg-red-600 text-white text-xs px-2 py-1 rounded">
+                            SALE
+                        </span>
+                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80"
+                             alt="Dell Laptop"
+                             class="w-full h-full object-cover hover:scale-105 transition">
+                    </div>
+
+                    <p class="text-xs text-gray-500 mt-4">Laptop</p>
+                    <h3 class="font-semibold mt-1">Dell Inspiron 15</h3>
+                    <p class="text-sm text-yellow-500 mt-2">★★★★☆ (120)</p>
+
+                    <div class="flex items-center gap-2 mt-2">
+                        <span class="text-xl font-bold">₹45,990</span>
+                        <span class="text-sm text-gray-400 line-through">₹50,990</span>
+                    </div>
+
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 rounded mt-4">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white border rounded-xl p-4 flex flex-col hover:shadow-lg">
+                    <div class="relative h-48 overflow-hidden rounded">
+                        <span class="absolute z-10 bg-green-600 text-white text-xs px-2 py-1 rounded">
+                            NEW
+                        </span>
+                        <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=600&q=80"
+                             alt="HP Laptop"
+                             class="w-full h-full object-cover hover:scale-105 transition">
+                    </div>
+
+                    <p class="text-xs text-gray-500 mt-4">Laptop</p>
+                    <h3 class="font-semibold mt-1">HP Pavilion</h3>
+                    <p class="text-sm text-yellow-500 mt-2">★★★★☆ (84)</p>
+
+                    <div class="flex items-center gap-2 mt-2">
+                        <span class="text-xl font-bold">₹52,990</span>
+                        <span class="text-sm text-gray-400 line-through">₹57,990</span>
+                    </div>
+
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 rounded mt-4">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white border rounded-xl p-4 flex flex-col hover:shadow-lg">
+                    <div class="h-48 overflow-hidden rounded">
+                        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=600&q=80"
+                             alt="Lenovo Laptop"
+                             class="w-full h-full object-cover hover:scale-105 transition">
+                    </div>
+
+                    <p class="text-xs text-gray-500 mt-4">Laptop</p>
+                    <h3 class="font-semibold mt-1">Lenovo IdeaPad</h3>
+                    <p class="text-sm text-yellow-500 mt-2">★★★★☆ (96)</p>
+
+                    <div class="flex items-center gap-2 mt-2">
+                        <span class="text-xl font-bold">₹38,990</span>
+                    </div>
+
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 rounded mt-4">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-white border rounded-xl p-4 flex flex-col hover:shadow-lg">
+                    <div class="h-48 overflow-hidden rounded">
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80"
+                             alt="MacBook"
+                             class="w-full h-full object-cover hover:scale-105 transition">
+                    </div>
+
+                    <p class="text-xs text-gray-500 mt-4">Laptop</p>
+                    <h3 class="font-semibold mt-1">MacBook Air M2</h3>
+                    <p class="text-sm text-yellow-500 mt-2">★★★★★ (210)</p>
+
+                    <div class="flex items-center gap-2 mt-2">
+                        <span class="text-xl font-bold">₹89,990</span>
+                    </div>
+
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 rounded mt-4">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="bg-white border rounded-xl p-4 flex flex-col hover:shadow-lg">
+                    <div class="h-48 overflow-hidden rounded">
+                        <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?auto=format&fit=crop&w=600&q=80"
+                             alt="ASUS Laptop"
+                             class="w-full h-full object-cover hover:scale-105 transition">
+                    </div>
+
+                    <p class="text-xs text-gray-500 mt-4">Laptop</p>
+                    <h3 class="font-semibold mt-1">ASUS Vivobook</h3>
+                    <p class="text-sm text-yellow-500 mt-2">★★★★☆ (73)</p>
+
+                    <div class="flex items-center gap-2 mt-2">
+                        <span class="text-xl font-bold">₹39,990</span>
+                    </div>
+
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 rounded mt-4">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="bg-white border rounded-xl p-4 flex flex-col hover:shadow-lg">
+                    <div class="h-48 overflow-hidden rounded">
+                        <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=600&q=80"
+                             alt="Dell XPS Laptop"
+                             class="w-full h-full object-cover hover:scale-105 transition">
+                    </div>
+
+                    <p class="text-xs text-gray-500 mt-4">Laptop</p>
+                    <h3 class="font-semibold mt-1">Dell XPS 13</h3>
+                    <p class="text-sm text-yellow-500 mt-2">★★★★☆ (144)</p>
+
+                    <div class="flex items-center gap-2 mt-2">
+                        <span class="text-xl font-bold">₹79,990</span>
+                    </div>
+
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 rounded mt-4">
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</main>
+
+</body>
+</html>
